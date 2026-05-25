@@ -36,7 +36,7 @@ Si omites `--port`, el script escanea los puertos disponibles automáticamente:
 - Si encuentra **varios puertos**, muestra una lista y te pide elegir.
 
 ```bash
-python bis_raw_eeg.py
+python bis.py
 ```
 
 ### Grabación indefinida (recomendado)
@@ -44,7 +44,7 @@ python bis_raw_eeg.py
 Graba hasta que presiones **Ctrl+C** para detener:
 
 ```bash
-python bis_raw_eeg.py --port /dev/tty.usbserial-BG00TDBX
+python bis.py --port /dev/tty.usbserial-BG00TDBX
 ```
 
 Al presionar Ctrl+C, el script detiene la adquisición, guarda el CSV y cierra la conexión automáticamente.
@@ -52,7 +52,7 @@ Al presionar Ctrl+C, el script detiene la adquisición, guarda el CSV y cierra l
 ### Grabación con duración fija
 
 ```bash
-python bis_raw_eeg.py --port /dev/tty.usbserial-BG00TDBX --duration 60
+python bis.py --port /dev/tty.usbserial-BG00TDBX --duration 60
 ```
 
 ---
@@ -76,19 +76,19 @@ python bis_raw_eeg.py --port /dev/tty.usbserial-BG00TDBX --duration 60
 **Grabar indefinidamente a 128 sps y guardar en archivo específico:**
 
 ```bash
-python bis_raw_eeg.py --port /dev/ttyUSB0 --output mi_registro.csv
+python bis.py --port /dev/ttyUSB0 --output mi_registro.csv
 ```
 
 **Grabar 5 minutos a 256 sps y mostrar gráfica al terminar:**
 
 ```bash
-python bis_raw_eeg.py --port /dev/ttyUSB0 --duration 300 --rate 256 --plot
+python bis.py --port /dev/ttyUSB0 --duration 300 --rate 256 --plot
 ```
 
 **Grabar sin mostrar datos en consola y guardar gráfica:**
 
 ```bash
-python bis_raw_eeg.py --port /dev/ttyUSB0 --quiet --plot-output resultado.png
+python bis.py --port /dev/ttyUSB0 --quiet --plot-output resultado.png
 ```
 
 ---
